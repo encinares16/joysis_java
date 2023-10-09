@@ -5,6 +5,7 @@ public class Instance_Variable {
     
     String livesOnEarth = "Earth Boy"; // instance variable
     String livesOnPluto = "Alien"; // instance variable
+    float x = 35.5f;
     
     public static void main(String[] args){
         Instance_Variable boy = new Instance_Variable();
