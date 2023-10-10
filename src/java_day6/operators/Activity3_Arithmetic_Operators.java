@@ -24,11 +24,11 @@ public class Activity3_Arithmetic_Operators {
         
         System.out.println("Check number if odd or even");
         System.out.println("Given Number: " + even);
-        System.out.println(!checkNumber ? "Number is : Odd " : "given number is: Even\n");
+        System.out.println(!checkNumber ? "Number is : Odd " : "Given number is: Even\n");
         
         byte odd = 97;
         checkNumber = odd % 2 == 0; 
         System.out.println("Given Number: " + odd);
-        System.out.println(checkNumber ? "Number is : Even " : "given number is: Odd");
+        System.out.println(checkNumber ? "Number is : Even " : "Given number is: Odd");
     }
 }
