@@ -1,5 +1,4 @@
-
-package java_day4.variables;
+package day04.variables;
 
 public class Activity1_Encinares {
     

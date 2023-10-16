@@ -1,19 +1,18 @@
-
-package java_day4.variables;
+package day04.variables;
 
 public class Local_Variable {
     public static void main(String[] args){
-        boy();
+        human(); //calling method
         alien();
     }
     
-    static void boy(){
-        String livesOnEarth = "Earth Boy"; // local variable can't be static
+    static void human(){
+        String livesOnEarth = "I am a human"; // local variable can't be static
         System.out.println(livesOnEarth);
     }
     
     static void alien(){
-        String livesOnPluto = "Alien"; // local variable
+        String livesOnPluto = "I am an alien"; // local variable
         System.out.println(livesOnPluto);
     }
 }

@@ -1,15 +1,14 @@
-
-package java_day4.variables;
+package day04.variables;
 
 public class Instance_Variable {
     
-    String livesOnEarth = "Earth Boy"; // instance variable
+    String livesOnEarth = "Human"; // instance variable
     String livesOnPluto = "Alien"; // instance variable
     float x = 35.5f;
     
     public static void main(String[] args){
-        Instance_Variable boy = new Instance_Variable();
-        System.out.println(boy.livesOnEarth);
+        Instance_Variable human = new Instance_Variable();
+        System.out.println(human.livesOnEarth);
         
         alien();
     }
