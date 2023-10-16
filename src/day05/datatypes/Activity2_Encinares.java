@@ -1,4 +1,4 @@
-package java_day5.datatypes;
+package day05.datatypes;
 
 public class Activity2_Encinares {
     
