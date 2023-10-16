@@ -1,4 +1,4 @@
-package java_day6.operators;
+package day06.operators;
 
 public class Activity3_Unary_Operators {
     
@@ -44,7 +44,7 @@ public class Activity3_Unary_Operators {
     static void not(){
         System.out.println("\n[ ! operator ] Unary NOT operator");
         boolean T = true;
-        System.out.println("Given boolean balue: " + T);
+        System.out.println("Given boolean value: " + T);
         System.out.println("Inverting the value: " + !T);
     }
 }

@@ -1,4 +1,4 @@
-package java_day7.activity;
+package day07.controlflow;
 import java.util.Scanner;
 
 public class Activity4_DecisionMaking {
@@ -19,7 +19,7 @@ public class Activity4_DecisionMaking {
             if(age > 64){
                 System.out.println("Senior Citizen\nAge Qualification: 75");
                 if(age > 74){
-                    System.out.println( "Hi " + name + "\nYou are eligible for pension");
+                    System.out.println( "Hi, " + name + "!\nYou are eligible for pension");
                 } else {
                     System.out.println( "Sorry " + name + ". You are not yet eligible for pension");
                     int isQualify = 75 - age; // experiment lang

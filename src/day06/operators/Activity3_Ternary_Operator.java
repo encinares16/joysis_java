@@ -1,4 +1,4 @@
-package java_day6.operators;
+package day06.operators;
 
 public class Activity3_Ternary_Operator {
 
