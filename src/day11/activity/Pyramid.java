@@ -1,4 +1,4 @@
-package java_day11.activity;
+package day11.activity;
 
 public class Pyramid {
     public static void main(String[] args) {

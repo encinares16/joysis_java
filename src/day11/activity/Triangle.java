@@ -1,5 +1,5 @@
 
-package java_day11.activity;
+package day11.activity;
 
 public class Triangle {
     public static void main(String[] args) {
