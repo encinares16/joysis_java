@@ -1,6 +1,6 @@
 package day15.math;
 import java.util.Random;  
-public class Math {
+public class Bingo {
     public static void main(String[] args) {
 //        Random random = new Random();
 //        
@@ -66,7 +66,7 @@ public class Math {
 //            } 
 //            System.out.println("");
 //        }
-random();
+//random();
 //shuffle();
         }
 
@@ -106,10 +106,10 @@ random();
         }
     }
     
-    static void random(){
-        for (int i = 1; i < 8; i++) {
-            int random = (int) (Math.random() * 100) + 1;
-            System.out.println(random);
-        }
-    }
+//    static void random(){
+//        for (int i = 1; i < 8; i++) {
+//            int random = (int) (Math.random() * 100) + 1;
+//            System.out.println(random);
+//        }
+//    }
 }
