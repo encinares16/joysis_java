@@ -1,5 +1,5 @@
 
-package java_day13.arrayloop;
+package day13.arrayloop;
 
 public class TraversingArray {
     public static void main(String[] args) {

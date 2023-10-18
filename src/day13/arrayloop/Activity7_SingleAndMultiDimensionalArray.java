@@ -1,4 +1,4 @@
-package java_day12.string;
+package day13.arrayloop;
 
 public class Activity7_SingleAndMultiDimensionalArray {
     public static void main(String[] args) {
