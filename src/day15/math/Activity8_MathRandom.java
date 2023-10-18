@@ -8,7 +8,8 @@ public class Activity8_MathRandom {
         
         Scanner scan = new Scanner(System.in);
         int lotto[] = new int[7];
-        
+        int lotto2[] = new int[7];
+
         System.out.println("Lotto Games");
         System.out.println("[1] Ultra Lotto 6/58");
         System.out.println("[2] Grand Lotto 6/55");
@@ -24,6 +25,7 @@ public class Activity8_MathRandom {
         for (int i=1; i < 7; i++) {
             int draw = (int) (Math.random() * getRange) + 1; // Grand Lotto 6/55
             lotto[i] = draw;
+            lotto2[i] = draw;
             for (int j = 1; j < i; j++) {
                 if (lotto[j] == draw ) {
                    draw = (int) (Math.random() * 7);
@@ -79,7 +81,7 @@ public class Activity8_MathRandom {
         
 
         System.out.print("Generated Combination: ");
-        for (int i = 1; i < lotto.length; i++) {
+        for (int i = 0; i < lotto.length; i++) {
             if(i < lotto.length - 1 ){
                 System.out.print(lotto[i] + "-");
             } else {
@@ -87,6 +89,12 @@ public class Activity8_MathRandom {
             }
         }
         System.out.println("");
-        }
+        
+        System.out.print("Before: ");
+        for(int data : lotto2){
+            System.out.print(data + "-");
+        } 
+        System.out.println(lotto.length);
     }
 }
+
