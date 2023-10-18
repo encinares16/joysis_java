@@ -1,4 +1,4 @@
-package java_day10.looping;
+package day10.looping;
 import java.util.*;
 
 public class Act5_Loop {

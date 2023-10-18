@@ -1,4 +1,4 @@
-package java_day10.looping;
+package day10.looping;
 
 public class ForLoop {
     public static void main(String[] args) {
