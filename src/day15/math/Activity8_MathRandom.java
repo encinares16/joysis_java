@@ -8,62 +8,52 @@ public class Activity8_MathRandom {
         
         Scanner scan = new Scanner(System.in);
         int lotto[] = new int[7];
-        int lotto2[] = new int[7];
-
+        int lotto2[] = new int[7]; 
+        
         System.out.println("PCSO Lotto Generator");
         System.out.println("[1] Ultra Lotto 6/58");
         System.out.println("[2] Grand Lotto 6/55");
         System.out.println("[3] Super Lotto 6/49");
-        System.out.println("[4] Mega  Lotto 6/45\n");
+        System.out.println("[4] Mega  Lotto 6/45");
+        System.out.println("Check Duplicate 6/5\n");
 
         int getRange = 0;
+        int restart = 1;
         do {
             System.out.print("Please input ranges of lotto games to generate: 6/");
             getRange = scan.nextInt();
-    //            System.out.println(getRange);
-        int restart = 1;
-        for (int i=1; i < 7; i++) {
-            int draw = (int) (Math.random() * getRange) + 1; // Grand Lotto 6/55
-            lotto[i] = draw;
-            lotto2[i] = draw;
-            for (int j = 1; j < i; j++) {
-                if (lotto[j] == draw ) {
-                    draw = (int) (Math.random() * 7);
-                    j=-1;                     
-                    System.out.println((restart++) + " loop restart, new random: " + draw );
-                }
-            }               
-            System.out.println("draw: "+ draw);
-            lotto[i] = draw;
-        }
-            
-            if (!(getRange == 45 || getRange == 49 || getRange == 55 || getRange == 58 )) {
+            //  System.out.println(getRange);
+
+            // user input validation 
+            if (!(getRange == 45 || getRange == 49 || getRange == 55 || getRange == 58 || getRange == 5 )) {
                 System.out.println("Invalid Input. \nAcceptable Number: [45, 49, 55, 58]\n");
+                  System.exit(0);
             }
             
-        } while (!(getRange == 45 || getRange == 49 || getRange == 55 || getRange == 58 || getRange == 5 ) );
+            // outer loop 
+            for (int i=1; i < lotto.length; i++) {
+                int draw = (int) (Math.random() * getRange) + 1; 
+                lotto[i] = draw;
+                lotto2[i] = draw;
+                
+                // inner loop 
+                for (int j = 1; j < i; j++) {
+                    // 1st inner loop iteration condition false,  j=1, first outer loop ite, i=1; 
+                    // draw == lotto 
+                    if (lotto[j] == draw ) {
+                        draw = (int) (Math.random() * 7);
+                        j=-1; // reset j = -1;
+                        // System.out.println((restart++) + " inner loop restart, new random: " + draw ); // uncomment to check iteration
+                    }
+                }               
+                //  System.out.println("draw: "+ draw); // uncomment to check iteration
+                lotto[i] = draw;
+            }
+            
+        } while (!(getRange == 45 || getRange == 49 || getRange == 55 || getRange == 58 || getRange == 5)); // validation
         
         
-        
-//        for (int i=1; i < 6; i++) {
-//            int draw = (int) (Math.random() * getRange) + 1; // Grand Lotto 6/55
-//            lotto[i] = draw;
-//            for (int j = 1; j < i; j++) {
-//                if (lotto[j] == draw ) {
-//                   draw = (int) (Math.random() * 7);
-//                    j=-1;
-//                    int restart = j=-1;
-//                    System.out.println(restart);
-//                }
-//            }   
-//            lotto[i] = draw;
-//        }
-        
-
-//        for(int data : lotto){
-//            System.out.print(data + "-");
-//        } 
-        
+        // 
         switch(getRange){
             case 58:
                 System.out.println("\nUltra Lotto 6/58");
@@ -81,31 +71,38 @@ public class Activity8_MathRandom {
                 System.out.println("Checked Combination");
         }
         
-
+        // 10-41-18-26-34-23
+        // foreach loop, format
         System.out.print("Generated Combination: ");
         for (int i = 1; i < lotto.length; i++) {
-            if(i < lotto.length - 1 ){
+            // lotto.length - 7
+            // 6th iteration, i = 6; condition istrue, execute the body
+            if(i < lotto.length - 1){
                 System.out.print(lotto[i] + "-");
+                
+            // 7th iteration, i = 7; condition isfalse, execute line 83, last element of index
             } else {
                 System.out.print(lotto[i]);
             }
         }
         
-        System.out.println("");
-//      System.out.print("Generated Combination: ");
+        System.out.println("\n");
+        
+        
         System.out.print("Before:              ");
+        // traversing first array
         for(int data : lotto2){
             System.out.print(data + "-");
         } 
         
+        // traversing second array
         System.out.print("\nAfter:               ");
         for(int data : lotto){
             System.out.print(data + "-");
         } 
         
-        System.out.println( "\nArray lenght: " + lotto2.length);
-        
-        
+        System.out.println( "\nArray length: " + lotto.length);
+        System.exit(0);
     }
 }
 
