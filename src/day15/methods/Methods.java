@@ -3,24 +3,27 @@ package day15.methods;
 public class Methods {
     public static void main(String[] args) {
         displayName("Summer");
-        getProduct(5, 5, 5);
+        displayName("Luffy");
+        getProduct(1, 2, 3);
         getProduct(5, 10, 5);
         
-        System.out.println(Methods.sum(1, 2));
+        Methods method = new Methods();
+        System.out.println("Sum: " + method.sum(1, 2));
     }
     
     static void displayName(String name){
-        for (int i = 0; i < 5; i++) {
-            System.out.println(name);
+        for (int i = 1; i < 6; i++) {
+            System.out.println(i +". " + name);
         }
+        System.out.println("");
     }
     
     public static int sum(int a, int b){ 
         return a + b;
     }
     
-    static void getProduct(int x, int y, int z){
-        System.out.println(x * y * z);
+    static void getProduct(int a, int b, int c){
+        System.out.println("The result of " + a + " x " + b + " x " + c + " = " + ( a * b * c));
     }
 }
 
