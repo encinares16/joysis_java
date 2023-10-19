@@ -1,4 +1,4 @@
-package day15.math;
+package day14.math;
 
 import java.lang.Math;
 

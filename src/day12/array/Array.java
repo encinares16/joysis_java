@@ -1,4 +1,4 @@
-package java_day12.array;
+package day12.array;
 
 public class Array {
 

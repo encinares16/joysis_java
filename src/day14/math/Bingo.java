@@ -1,4 +1,4 @@
-package day15.math;
+package day14.math;
 import java.util.Random;  
 public class Bingo {
     public static void main(String[] args) {
