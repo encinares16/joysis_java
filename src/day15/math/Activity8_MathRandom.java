@@ -22,12 +22,11 @@ public class Activity8_MathRandom {
         do {
             System.out.print("Please input ranges of lotto games to generate: 6/");
             getRange = scan.nextInt();
-            //  System.out.println(getRange);
 
             // user input validation 
             if (!(getRange == 45 || getRange == 49 || getRange == 55 || getRange == 58 || getRange == 5 )) {
                 System.out.println("Invalid Input. \nAcceptable Number: [45, 49, 55, 58]\n");
-                  System.exit(0);
+                //  System.exit(0); 
             }
             
             // outer loop 
@@ -50,10 +49,10 @@ public class Activity8_MathRandom {
                 lotto[i] = draw;
             }
             
-        } while (!(getRange == 45 || getRange == 49 || getRange == 55 || getRange == 58 || getRange == 5)); // validation
+        } while (!(getRange == 45 || getRange == 49 || getRange == 55 || getRange == 58 || getRange == 5)); // user input validation
         
         
-        // 
+        // print selected games
         switch(getRange){
             case 58:
                 System.out.println("\nUltra Lotto 6/58");
@@ -72,15 +71,17 @@ public class Activity8_MathRandom {
         }
         
         // 10-41-18-26-34-23
-        // foreach loop, format
+        // foreach loop, formating output
         System.out.print("Generated Combination: ");
+        
+        // i=0; print 1st element 0
         for (int i = 1; i < lotto.length; i++) {
             // lotto.length - 7
             // 6th iteration, i = 6; condition istrue, execute the body
             if(i < lotto.length - 1){
                 System.out.print(lotto[i] + "-");
                 
-            // 7th iteration, i = 7; condition isfalse, execute line 83, last element of index
+            // 7th iteration, i = 7; condition isfalse, execute line 83, last element of index, with no "-" sign
             } else {
                 System.out.print(lotto[i]);
             }
@@ -88,14 +89,13 @@ public class Activity8_MathRandom {
         
         System.out.println("\n");
         
-        
+        // traversing before, lotto2 array
         System.out.print("Before:              ");
-        // traversing first array
         for(int data : lotto2){
             System.out.print(data + "-");
         } 
         
-        // traversing second array
+        // traversing lotto array
         System.out.print("\nAfter:               ");
         for(int data : lotto){
             System.out.print(data + "-");
