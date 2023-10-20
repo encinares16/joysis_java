@@ -112,8 +112,8 @@ public class BingoGen {
                     i--;
                 }
             }
-            
-            // row I
+                            // System.out.println((30 - 16 + 1) + 16); -> 31
+            // row I         if Math random generate 30 - 16 = (14 + 1 = 15) + 16 (max - min + 1) + max
             card[0][0][0][i][1] = (int) (Math.random() * (30 - 16 + 1) + 16); // randomize number 16-30
             for (int j = 0; j < i; j++) {
                 if (card[0][0][0][i][1] == card[0][0][0][j][1]) {
@@ -122,7 +122,7 @@ public class BingoGen {
             }
             
             // row N
-            card[0][0][0][i][2] = (int) (Math.random() * (45 - 31 + 1) + 31); // randomize number 16-30
+            card[0][0][0][i][2] = (int) (Math.random() * (45 - 31 + 1) + 31); // randomize number 31-45
             for (int j = 0; j < i; j++) {
                 if (card[0][0][0][i][2] == card[0][0][0][j][2]) {
                     i--;
@@ -131,7 +131,7 @@ public class BingoGen {
             }
             
             // row G
-            card[0][0][0][i][3] = (int) (Math.random() * (60 - 46 + 1) + 46); // randomize number 16-30
+            card[0][0][0][i][3] = (int) (Math.random() * (60 - 46 + 1) + 46); // randomize number 46-60
             for (int j = 0; j < i; j++) {
                 if (card[0][0][0][i][3] == card[0][0][0][j][3]) {
                     i--;
@@ -139,7 +139,7 @@ public class BingoGen {
             }    
             
             // row O
-            card[0][0][0][i][4] = (int) (Math.random() * (75 - 61 + 1) + 61); // randomize number 16-30
+            card[0][0][0][i][4] = (int) (Math.random() * (75 - 61 + 1) + 61); // randomize number 61-75
             for (int j = 0; j < i; j++) {
                 if (card[0][0][0][i][4] == card[0][0][0][j][4]) {
                     i--;
@@ -156,7 +156,7 @@ public class BingoGen {
                         for (int m = 0; m < card[i][j][k][l].length; m++) {
                             delay(600);
                             if (card[0][0][0][l][0] < 10) {
-                                // format b row spacing if < 10
+                                // format b row spacing if < 10, add space before the number
                                 System.out.print(" " + card[i][j][k][l][m]);
                             } else {
                                 System.out.print(card[i][j][k][l][m] + " ");
@@ -169,3 +169,26 @@ public class BingoGen {
         }
     }
 }
+
+/*
+Output:
+        Reference: 
+        B  I  N  G  O
+         1 16 31 46 61 
+         2 25 33 50 64 
+         5 17 99 55 65 
+         9 28 58 48 60 
+        15 30 45 60 75  
+
+        Type 'G' to generate: g
+
+        B  I  N  G  O
+         7 26 38 60 67 
+        13 22 39 54 71  
+         8 20 99 57 65 
+         4 19 41 48 74 
+         3 25 31 52 63 
+
+        Type 'G' to generate: x
+        Program Terminated
+*/
