@@ -74,18 +74,18 @@ public class BingoGen {
         }
         
         Scanner scan = new Scanner(System.in);
-        int start = 0;
+        int gen = 0;
         do {        
             System.out.print("\nType 'G' to generate: ");
             String yes = scan.nextLine().toLowerCase();
             if (yes.equals("g")) {
                 generate();
-                start = 1;
+                gen = 1;
             } else {
                 System.out.println("Program Terminated");
                 System.exit(0);
             }
-        } while (start == 1);
+        } while (gen == 1);
     }
     
     public static void delay(int milliseconds){
@@ -112,7 +112,7 @@ public class BingoGen {
                     i--;
                 }
             }
-                            // System.out.println((30 - 16 + 1) + 16); -> 31
+                                // System.out.println((30 - 16 + 1) + 16); -> 31
             // row I         if Math random generate 30 - 16 = (14 + 1 = 15) + 16 (max - min + 1) + max
             card[0][0][0][i][1] = (int) (Math.random() * (30 - 16 + 1) + 16); // randomize number 16-30
             for (int j = 0; j < i; j++) {
